@@ -1,0 +1,401 @@
+/*
+Theme Name: Ross Anderson Portfolio Theme
+Theme URI: 
+Author: Ross Anderson
+Author URI: http://itsmeross.com
+Description: 
+Version: 0.1
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Tags: 
+Text Domain: raportfolio
+*/
+
+*:before,
+*,
+*:after {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	-webkit-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-o-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-ms-transition: color 0.1s ease-in, background 0.1s ease-in;
+	-moz-transition: color 0.1s ease-in, background 0.1s ease-in;
+	transition: color 0.1s ease-in, background 0.1s ease-in;
+	word-wrap: break-word;
+	color: #cb5211;
+}
+
+a:hover {
+	color: #7b7b7b;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	font-family: 'Arvo', serif;
+}
+
+::-moz-selection { 
+  color: #FFF;
+	background: rgba(203,82,17,.6);
+}
+
+::selection {
+  color: #FFF; 
+	background: rgba(203,82,17,.6);
+}
+
+.navbar { 
+	margin-bottom: 0px; 
+	padding: 35px 0;
+	background: #f7f7f7;
+	border-bottom: 1px solid #eaeaea;
+	border-radius: 0; 
+}
+
+.navbar-nav > li > a { 
+	color: #484545;
+	font-size: 1.05em;
+	font-family: "Arvo", serif !important;
+	letter-spacing: 1px;
+}
+
+.navbar-nav > li > a:hover,
+.navbar-nav > li.active > a,
+.navbar-nav > li > a:focus,
+.nav .open > a,
+.nav .open > a:focus, 
+.nav .open > a:hover {
+	color: #cb5211; 
+	background: none;
+}
+
+.navbar-brand { 
+	font-size: 1.5em; 
+	font-weight: 700; 
+	letter-spacing: 2px;
+	font-family: "Arvo", serif;
+	color: #cb5211 !important;
+}
+
+.navbar-brand > span {
+	font-size: 0.5em;
+}
+
+.navbar .dropdown-menu {
+	border: 1px solid #eaeaea;
+}
+
+.navbar .dropdown-menu > li > a {
+	font-family: "Arvo", serif;
+	padding: 5px 20px;
+	color: #484545;
+}
+
+.navbar .dropdown-menu > li > a:focus, 
+.navbar .dropdown-menu > li > a:hover {
+	background: #f7f7f7;
+}
+
+.navbar .dropdown-menu>.active>a,
+.navbar .dropdown-menu>.active>a:focus,
+.navbar .dropdown-menu>.active>a:hover {
+	background: #cb5211;
+	color: #FFF;
+}
+
+.navbar-brand:hover { opacity: 0.7; }
+
+.navbar .navbar-toggle .icon-bar { background: #cb5211; }
+
+.headline {
+	padding: 40px 0;
+	border-bottom: 1px solid #eaeaea;
+}
+
+.utility {
+	border-bottom: 1px solid #eaeaea;
+	padding: 5px;
+	background: #f7f7f7;
+	overflow-x: scroll;
+}
+
+.utility span {
+	padding: 0 10px;
+	border-right: 1px solid #eaeaea;
+	float: left;
+}
+
+.utility span > i {
+	margin-right: 7px;
+	color: #cb5211;
+}
+
+.utility .col-xs-4:nth-of-type(2){
+	text-align: center;
+}
+
+.utility .col-xs-4:nth-of-type(3){
+	text-align: right;
+}
+
+.jumbotron {
+	border-bottom: 1px solid #eaeaea;
+	margin-bottom: 0px;
+	background: #65beb4;
+}
+
+.jumbotron p {
+	color: #FFF;
+	font-family: 'Arvo', serif;
+	text-align: center;
+	padding: 0px;
+	margin: 0 0 10px;
+	font-size: 2em;
+}
+
+.jumbotron p:last-of-type {
+	margin: 0;
+}
+
+.content {
+	padding: 30px;
+}
+
+article {
+	padding: 30px 0;
+	border-bottom: 1px solid #eaeaea; 
+}
+
+article:nth-of-type(even) {
+	background: #f7f7f7;
+}
+
+article .post-headline {
+	border-bottom: 1px solid #eaeaea;
+	padding-bottom: 30px;
+}
+
+article .utility {
+	margin-bottom: 30px;
+}
+
+article:nth-of-type(even) .utility {
+	background: #FFF;
+}
+
+.portfolio-item {
+	margin-bottom: 20px;
+}
+
+.portfolio-item p {
+	text-align: center;
+	background: #f7f7f7;
+	padding: 10px 20px;
+}
+
+.portfolio-item a {
+	color: #7b7b7b;
+}
+
+.portfolio-item:hover a {
+	color: #cb5211;
+	text-decoration: none;
+}
+
+.portfolio-item-image {
+	position: relative;
+	overflow: hidden;
+}
+
+.portfolio-item-image:after {
+	font-family: FontAwesome;
+	font-size: 2.5em;
+	content: "\f002";
+	color: #FFF;
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(203,82,17,0);
+	opacity: 0;
+	padding: 50%;
+	margin: -.5em;
+	transition: all 0.3s ease;
+}
+
+.portfolio-item:hover .portfolio-item-image:after {
+	opacity: 1;
+	background: rgba(203,82,17,.6);
+}
+
+.portfolio-item img {
+	width: 100%;
+}
+
+.portfolio-nav {
+	padding: 34px 0;
+	background: #FFF;
+}
+
+.portfolio-nav h1 {
+	float: left;
+}
+
+.portfolio-image {
+	margin-top: 20px;
+}
+
+.portfolio-image img {
+	width: 100%;	
+}
+
+.portfolio {
+	border-top: 1px solid #eaeaea;
+}
+
+.portfolio .left {
+	border-right: 1px solid #eaeaea;
+}
+
+@media (max-width: 992px) {
+
+	.portfolio .left {
+		border-right: none;
+		border-bottom: 1px solid #eaeaea;
+		padding-bottom: 10px;
+		margin-bottom: 10px;
+	}
+
+}
+
+.portfolio tr td:first-child{
+	font-style: italic;
+	font-weight: bold;
+	padding-right: 20px;
+}
+
+.contact h3 {
+	margin-bottom: 20px;
+}
+
+.contact p {
+	margin-bottom: 20px;
+}
+
+.contact form input,
+.admin form input,
+.contact form textarea,
+.admin form textarea{
+	border-radius: 0;
+	border-color: #eaeaea;
+	resize: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+.contact form input:focus,
+.admin form input:focus,
+.contact form textarea:focus,
+.admin form textarea:focus  {
+	border-color: #cb5211;
+	-webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(203,82,17,.6);
+}
+
+.btn-submit {
+	background: #cb5211;
+	border-color: #a9440e;
+	font-family: 'Arvo', serif;
+	color: #FFF;
+	margin-bottom: 10px; 
+}
+
+.btn-submit:hover {
+	background: #a9440e;
+	color: #FFF;
+}
+
+.btn-submit:focus,
+.btn-submit:active {
+	outline: none !important;
+}
+
+.contact .alert {
+	padding: 12px 15px;
+	margin-bottom: 10px;
+}
+
+.contact .alert-danger {
+	border: #cb5211;
+	color: #cb5211;
+	background: #edd4C7;
+}
+
+.contact .alert button {
+	top: 0;
+	right: 0;
+	outline: none;
+}
+
+footer {
+	margin-top: 20px;
+	padding: 30px 0;
+	font-size: 0.75em;
+}
+
+footer .textwidget {
+	margin: 0;
+	padding: 0;
+	color: #b8b8b8;
+	text-align: right;
+}
+
+footer ul {
+	list-style: none;
+	text-align: right;
+	margin: 0;
+	padding: 0;
+}
+
+footer ul a {
+	color: #737269;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+footer ul a:hover {
+	color: #b8b8b8;
+	text-decoration: underline;
+}
+
+@media (max-width: 767px){
+	
+	footer .widget li,
+	footer .textwidget {
+		text-align: center;
+	}
+	
+	footer .fa {
+		font-size: 2em;
+	}
+	
+}
+
+.login h1 a {
+	background: url(img/wordpress-logo.svg) !important;
+}
+
+strong {
+	color: #cb5211;
+}
+
